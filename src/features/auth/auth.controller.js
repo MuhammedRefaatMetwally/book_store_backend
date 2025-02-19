@@ -8,7 +8,7 @@ const login = async (req, res, next) => {
 
     const { user, token } = await authServices.login(username, password);
 
-    res.cookie("access_token",token,{
+    res.cookie("access_token",token,{ 
       httpOnly:true,
       secure: process.env.NODE_ENV === "production",  
       samesite:"Strict",
@@ -54,7 +54,7 @@ const logout = async (req, res, next) => {
   console.log("Mapped to auth.controller.logout");
   
   res.clearCookie("access_token", {
-    httpOnly: true,
+    httpOnly: true, 
     secure: process.env.NODE_ENV === "production",
     sameSite: "Strict",
   });
