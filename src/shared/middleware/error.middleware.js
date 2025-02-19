@@ -1,11 +1,11 @@
 const ResourceNotFoundError = require("../error/resource_not_found_error");
 const RuntimeError = require("../error/runtime_error");
 
-const errorMiddleware = (err, req, res, next) => {
+const errorMiddleware = (err, req, res, next) => { 
     try {
         let error = err instanceof RuntimeError ? err : new RuntimeError(err.message, err.statusCode || 500);
 
-        console.error(err);
+        console.error(err); 
 
         if (err.name === 'CastError') {
             error = new ResourceNotFoundError("Resource", "id", err.value);
