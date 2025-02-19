@@ -43,7 +43,7 @@ const findById = async (id) => {
 };
 
 // tried to use session transactions caused Transaction numbers are only allowed on a replica set member or mongos !
-
+ 
 const save = async ({ id, ...userData }) => {
   try {
     let newUser;
@@ -58,7 +58,7 @@ const save = async ({ id, ...userData }) => {
     throw error;
   }
 };
- 
+  
 const blacklistToken = async (token, expiry) => {
   await redisClient.set(token, "blacklisted", "EX", expiry);
 };
