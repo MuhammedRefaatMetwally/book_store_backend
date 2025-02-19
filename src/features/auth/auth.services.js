@@ -8,7 +8,7 @@ const login = async (username, password) => {
 
   if (!user) {
     const error = new Error("User does not exist");
-    error.statusCode = 409;
+    error.statusCode = 409;  
     throw error;
   }
 

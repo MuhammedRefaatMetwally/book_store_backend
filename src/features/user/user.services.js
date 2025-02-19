@@ -13,7 +13,7 @@ const getUserByUsername = async (username) => {
   const user = await userRepo.findOne({ username });
   if (!user)
     throw new Error("User with username " + username + " is not found.");
-
+ 
   return user;
 };
 

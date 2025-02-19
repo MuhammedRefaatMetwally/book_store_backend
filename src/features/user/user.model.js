@@ -58,7 +58,7 @@ const save = async ({ id, ...userData }) => {
     throw error;
   }
 };
-
+ 
 const blacklistToken = async (token, expiry) => {
   await redisClient.set(token, "blacklisted", "EX", expiry);
 };

@@ -2,7 +2,7 @@ const bookRepo = require("../../models/book.model");
 
 const getAllBooks = async () => {
   console.log("Getting Books");
-  return await bookRepo.findAll();
+  return await bookRepo.findAll(); 
 };
 
 const getBookById = async (id) => {

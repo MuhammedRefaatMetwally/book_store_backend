@@ -5,7 +5,7 @@ const {
   handleGetBookById,
   handleCreateBook,
   handleUpdateBook,
-  handlePatchBook,
+  handlePatchBook, 
   handleDeleteBook,
 } = require("./books.controller");
 const { authorize } = require("../../shared/middleware/auth.middleware");

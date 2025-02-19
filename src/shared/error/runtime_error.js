@@ -8,4 +8,4 @@ class RuntimeError extends Error {
     }
   }
   
-  module.exports = RuntimeError;
+  module.exports = RuntimeError; 

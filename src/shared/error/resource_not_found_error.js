@@ -8,7 +8,8 @@ class ResourceNotFoundError extends RuntimeError {
     this.name = this.constructor.name || "ResourceNotFoundError";
     this.details = { resource, field, value };
   }
-  
+
 }
 
 module.exports = ResourceNotFoundError;
+ 
