@@ -10,7 +10,6 @@ const authorize = async (req, res, next) => {
     if (!token) return res.status(401).json({ message: "Unauthorized" });
 
     // const isBlacklisted = await redisClient.get(token); // old way to expire token using blacklisting with redis !
-
     // if (isBlacklisted) {
     //   return res
     //     .status(401)
